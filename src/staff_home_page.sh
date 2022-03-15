@@ -7,7 +7,7 @@ do
 	echo "1)    Search for a Flight"
 	echo "2)    Book a flight"
 	echo "3)    Cancel a flight"
-	echo "4)    Display flight detILS"
+	echo "4)    Display flight details"
 	echo "5)    To EXIT"
 	echo "											   "
 

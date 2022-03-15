@@ -1,5 +1,5 @@
 echo "*************************************"
 echo "                                     "
-echo "Welcome To Library Management System."
+echo "Welcome To Flight Management System."
 echo "                                     "
 echo "*************************************"
