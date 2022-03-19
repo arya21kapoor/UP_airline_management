@@ -1,27 +1,21 @@
-echo "                                             "
-echo "Press 1 to login as Student"
-echo "Press 2 to login as Staff"
-echo "                                             "
+read -p "Enter username: " inputUserName
+read -sp "Enter password: " inputPassword; echo;
 
-read student_or_staff
+result=( $(awk -v username=${inputUserName,,} -F"," '{if (username == $2) {print $1, $6}}' userinfo.txt) )
+# for extracting the userid and password for further usage and verification.
 
-if [ $student_or_staff -eq 1 ]
+userid=${result[0]}
+paa=${result[1]}
+
+if [ -z $userid ]
 then
-	bash student_home_page.sh
+	echo "User does not exist"
 else
-	echo "                                             "
-	echo "Enter Your Id"
-	echo "                                             "
-
-	read staff_id
-
-	if [ $staff_id -le 100 ] && [ $staff_id -ge 0 ]
+	if [ $paa  =  $inputPassword ]
 	then
-		bash staff_home_page.sh
+		echo -e "\nLogin Successful"
+		bash menu.sh $userid
 	else
-			echo "                                             "
-			echo "Incorrect Staff ID"
-			echo "Please Enter Correct ID"	
-			echo "                                             "
+		echo "Login UnSuccessful"
 	fi
-fi
+fi	

@@ -1,0 +1,9 @@
+F1,Vistara,JFK,Brazil,17/03/2022,17,300
+F2,Air India,Mumbai,JFK,18/03/2022,24,250
+F3,Go Air,South Africa,Canada,18/03/2022,30,199
+F4,Kuwait Airways,Kuwait,Japan,19/03/2022,50,150
+F5,Vistara,London,Delhi,20/03/2022,10,300
+
+
+
+
